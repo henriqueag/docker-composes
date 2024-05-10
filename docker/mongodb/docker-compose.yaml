@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   mongo-express:
     image: mongo-express
@@ -14,6 +12,7 @@ services:
       - mongo
     networks:
       - mongo-network
+    restart: no
 
   mongo:
     image: mongo
@@ -24,10 +23,11 @@ services:
       - mongo_data:/data/db
     networks:
       - mongo-network
+    restart: no
 
-networks: 
-    mongo-network:
-      driver: bridge
+networks:
+  mongo-network:
+    driver: bridge
 
 volumes:
   mongo_data:
