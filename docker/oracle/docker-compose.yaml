@@ -1,7 +1,4 @@
-version: '3'
-
 services:
-  
   oracle:
     image: container-registry.oracle.com/database/free:latest
     container_name: oracle
