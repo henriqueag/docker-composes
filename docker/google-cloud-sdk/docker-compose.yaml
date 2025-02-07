@@ -1,0 +1,9 @@
+services:
+  googlecloud:
+    image: google/cloud-sdk:emulators
+    container_name: googlecloud
+    entrypoint: gcloud --quiet beta emulators pubsub start --host-port=0.0.0.0:8085 --verbosity=debug --log-http
+    ports:
+        - 8085:8085
+    network_mode: bridge
+    restart: no
