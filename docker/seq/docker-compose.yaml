@@ -4,6 +4,8 @@ services:
     container_name: seq
     environment:
       ACCEPT_EULA: Y
+      SEQ_FIRSTRUN_ADMINUSERNAME: admin
+      SEQ_FIRSTRUN_ADMINPASSWORD: admin
     ports:
       - 15341:80
       - 5341:5341
